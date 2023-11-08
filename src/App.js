@@ -1,5 +1,11 @@
+import Glasses from "./Ex2/Glasses";
+
 function App() {
-  return <div className="App"></div>;
+  return (
+    <div>
+      <Glasses />
+    </div>
+  );
 }
 
 export default App;
