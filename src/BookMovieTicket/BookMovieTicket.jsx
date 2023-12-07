@@ -1,25 +1,17 @@
-import React from "react";
+import { useState } from "react";
 import data from "./Ticket.json";
-import { useSelector } from "react-redux";
 import SeatMovie from "./SeatMovie";
 import ListSeat from "./ListSeat";
-import css from "./";
 export default function BookMovieTicket() {
   return (
-    <div
-      className="row bg-dark"
-      style={{
-        backgroundImage: `url(http://getwallpapers.com/wallpaper/full/c/a/9/243880.jpg
-    )`,
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "cover",
-      }}
-    >
-      <div className="col-7">
-        <SeatMovie listSeats={data} />
-      </div>
-      <div className="col-5">
-        <ListSeat />
+    <div className="container">
+      <div className="row">
+        <div className="col-8">
+          <SeatMovie seatsData={data} />
+        </div>
+        <div className="col-4">
+          <ListSeat />
+        </div>
       </div>
     </div>
   );

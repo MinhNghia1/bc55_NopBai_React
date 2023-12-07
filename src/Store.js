@@ -1,14 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
-
-const initalStateTicket = [];
-const ticketReducer = (state = 0, action) => {
-  return state;
-};
+import busticketReducer from "./Slice/SliceTicketMovie";
 
 const store = configureStore({
   reducer: {
-    ticket: ticketReducer,
+    ticket: busticketReducer,
   },
 });
-
 export default store;
